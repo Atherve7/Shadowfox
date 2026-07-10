@@ -468,3 +468,84 @@ section{
     transform:translateY(-10px) scale(1.03);
 
 }
+/* ================= PROJECTS ================= */
+
+.projects-section{
+
+    min-height:100vh;
+
+}
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:30px;
+
+}
+
+.project-card{
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.project-card h3{
+
+    color:#FF6FA5;
+
+    margin-bottom:20px;
+
+}
+
+.project-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.tech-stack{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.tech-stack span{
+
+    padding:8px 16px;
+
+    border-radius:50px;
+
+    background:#FFE5F0;
+
+    color:#FF4F95;
+
+    font-size:14px;
+
+}
