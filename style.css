@@ -69,6 +69,7 @@ body::after{
     backdrop-filter:blur(18px);
     box-shadow:0 12px 30px rgba(0,0,0,.08);
     z-index:1000;
+    transition:.3s; 
 }
 
 .logo{
@@ -175,7 +176,11 @@ nav a:hover::after{
 }
 
 .btn:hover{
+
     transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(255,111,165,.25);
+
 }
 
 .social-icons{
@@ -504,7 +509,7 @@ section{
 
 .project-card:hover{
 
-    transform:translateY(-10px);
+    transform:translateY(-12px) scale(1.02);
 
 }
 
@@ -626,5 +631,24 @@ footer{
     color:#666;
 
     font-size:15px;
+
+}
+/* ================= ANIMATIONS ================= */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:all .8s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
 
 }

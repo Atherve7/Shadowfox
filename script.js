@@ -13,60 +13,75 @@ const typingText = document.getElementById("typing-text");
 
 let roleIndex = 0;
 let charIndex = 0;
-let isDeleting = false;
+let deleting = false;
 
-function typeEffect() {
+function typeEffect(){
 
-    const currentRole = roles[roleIndex];
+    const current = roles[roleIndex];
 
-    if (!isDeleting) {
+    if(!deleting){
 
-        typingText.textContent = currentRole.substring(0, charIndex + 1);
+        typingText.textContent = current.substring(0,charIndex+1);
 
         charIndex++;
 
-        if (charIndex === currentRole.length) {
+        if(charIndex===current.length){
 
-            isDeleting = true;
+            deleting=true;
 
-            setTimeout(typeEffect, 1500);
+            setTimeout(typeEffect,1500);
 
             return;
 
         }
 
-    } else {
+    }
 
-        typingText.textContent = currentRole.substring(0, charIndex - 1);
+    else{
+
+        typingText.textContent=current.substring(0,charIndex-1);
 
         charIndex--;
 
-        if (charIndex === 0) {
+        if(charIndex===0){
 
-            isDeleting = false;
+            deleting=false;
 
-            roleIndex++;
-
-            if (roleIndex >= roles.length) {
-
-                roleIndex = 0;
-
-            }
+            roleIndex=(roleIndex+1)%roles.length;
 
         }
 
     }
 
-    setTimeout(typeEffect, isDeleting ? 60 : 100);
+    setTimeout(typeEffect,deleting?60:100);
 
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+typeEffect();
 
-    if (typingText) {
 
-        typeEffect();
+// ===============================
+// Fade Animation
+// ===============================
 
-    }
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section").forEach((section)=>{
+
+section.classList.add("hidden");
+
+observer.observe(section);
 
 });
