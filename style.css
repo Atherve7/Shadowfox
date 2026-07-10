@@ -549,3 +549,82 @@ section{
     font-size:14px;
 
 }
+/* ================= CONTACT ================= */
+
+.contact-section{
+
+    min-height:80vh;
+
+}
+
+.contact-card{
+
+    max-width:750px;
+
+    margin:auto;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(18px);
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.contact-card h3{
+
+    margin-bottom:18px;
+
+    color:#FF6FA5;
+
+}
+
+.contact-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.contact-info{
+
+    margin-top:35px;
+
+}
+
+.contact-info p{
+
+    margin:18px 0;
+
+    font-size:18px;
+
+}
+
+.contact-info i{
+
+    width:35px;
+
+    color:#FF6FA5;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#666;
+
+    font-size:15px;
+
+}
